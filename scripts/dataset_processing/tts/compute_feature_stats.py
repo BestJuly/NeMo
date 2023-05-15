@@ -98,7 +98,9 @@ def get_args():
         help="Path to output JSON file with dataset feature statistics.",
     )
     parser.add_argument(
-        "--overwrite", default=False, type=bool, help="Whether to overwrite the output stats file if it exists.",
+        "--overwrite",
+        action=argparse.BooleanOptionalAction,
+        help="Whether to overwrite the output stats file if it exists.",
     )
 
     args = parser.parse_args()
